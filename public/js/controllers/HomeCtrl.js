@@ -7,12 +7,22 @@ var controllerName = 'HomeCtrl';
 angular.module(controllerName, []).
     controller(controllerName, function ($scope, $http) {
 
+        var setCarouselDimensions = function () {
+            $('#myCarousel').height(window.innerHeight);
+            $('.carousel-inner').css({height: window.innerHeight + 'px', width: '100%', maxHeight: '768px', maxWidth: '1280px'});
+        }
+
+        $(window).resize(function () {
+            setCarouselDimensions();
+        });
+
         $(document).ready(function () {
-                $('#myCarousel').height(window.innerHeight);
-            }
-        )
+            setCarouselDimensions();
+        });
 
         $scope.arrowLink = 'home#myCarousel';
+
+        $scope.$emit("BackgroundChange", "home-background");
 
         var udyrSlide = {
             image: 'img/leesin.jpg',
