@@ -9,7 +9,7 @@ angular.module(controllerName, []).
 
         var setCarouselDimensions = function () {
             $('#myCarousel').height(window.innerHeight);
-            $('.carousel-inner').css({height: window.innerHeight + 'px', width: '100%', maxHeight: '768px', maxWidth: '1280px'});
+            //$('.carousel-inner').css({height: window.innerHeight + 'px', width: '100%', maxHeight: '768px', maxWidth: '1280px'});
         }
 
         $(window).resize(function () {
