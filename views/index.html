@@ -2,7 +2,7 @@
 <head>
     <meta charset='utf8'>
     <base href="/"/>
-    <title>Node App</title>
+    <title>UIN Gaming</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/css/carrousel.css"/>
     <link rel="stylesheet" href="/css/app.css"/>
@@ -11,7 +11,7 @@
 <div class="navbar-wrapper">
     <div class="container">
 
-        <div class="navbar navbar-inverse navbar-static-top">
+        <div class="navbar navbar-inverse navbar-static-top" ng-controller="NavCtrl">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -19,25 +19,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Project name</a>
+                    <a class="navbar-brand" href="#">UIN Gaming</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b
-                                    class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
+                        <li ng-class="{'active': activeClass('/login')}">
+                            <a ng-click="clickLink('/login')">Login</a>
+                        </li>
+                        <li ng-class="{'active': activeClass('/home')}">
+                            <a ng-click="clickLink('/home')">Home</a>
+                        </li>
+                        <li ng-class="{'active': activeClass('/events')}">
+                            <a ng-click="clickLink('/events')">Events</a>
                         </li>
                     </ul>
                 </div>
@@ -53,8 +46,10 @@
 <script src="js/lib/jquery.min.js"></script>
 <script src="js/lib/bootstrap.js"></script>
 <script src="js/lib/holder.js"></script>
+<script src="js/controllers/HomeCtrl.js"></script>
+<script src="js/controllers/EventsCtrl.js"></script>
+<script src="js/controllers/NavCtrl.js"></script>
 <script src="js/app.js"></script>
-<script src="js/controllers.js"></script>
 <script src="js/directives.js"></script>
 <script src="js/filters.js"></script>
 <script src="js/services.js"></script>
