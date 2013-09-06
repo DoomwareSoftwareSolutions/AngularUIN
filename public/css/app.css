@@ -39,3 +39,30 @@
 .event-list {
     width: 80%;
 }
+
+.custom-marketing {
+    max-width: 100%;
+}
+
+.custom-row {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.custom-carousel {
+    margin-bottom: 0px;
+}
+
+.first-row {
+    background-color: rgba(0, 255, 225, 0.5);
+}
+
+.second-row {
+    background-color: rgba(225, 255, 0, 0.5);
+}
+
+.third-row {
+    background-color: rgba(255, 0, 0, 0.5);
+}
