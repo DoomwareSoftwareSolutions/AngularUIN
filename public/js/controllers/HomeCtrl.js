@@ -48,6 +48,27 @@ angular.module(controllerName, []).
             linkRef: '#'
         };
 
+        $scope.firstFeature = {
+            heading: 'Best Lee Sin LAS',
+            subheading: 'Quien es el mejor?',
+            description: '1v1 solo top.',
+            image: 'img/fiddleSquare.png'
+        };
+
+        $scope.secondFeature = {
+            heading: 'Otro evento',
+            subheading: 'Quien ganara?',
+            description: '5v5 summoners rift.',
+            image: 'img/ziggsSquare.png'
+        };
+
+        $scope.thirdFeature = {
+            heading: 'Hello World Event',
+            subheading: 'Llama a tus amigos',
+            description: 'Full ARAM.',
+            image: 'img/brandSquare.png'
+        };
+
         $scope.slides = [udyrSlide, zedSlide, threshSlide];
 
     });
