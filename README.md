@@ -6,8 +6,7 @@
 	sudo apt-get install python-software-properties python g++ make
 	sudo add-apt-repository ppa:chris-lea/node.js
 	sudo apt-get update
-	sudo apt-get install nodejs
-
+	sudo apt-get install nodejs coffeescript
 ## Installing Dependencies
 In the directory where the `package.json` file is located (root directory), execute the following:
 
