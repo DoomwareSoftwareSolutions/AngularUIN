@@ -49,23 +49,23 @@ angular.module(controllerName, []).
         };
 
         $scope.firstFeature = {
-            heading: 'Best Lee Sin LAS',
-            subheading: 'Quien es el mejor?',
-            description: '1v1 solo top.',
+            heading: 'Fiddlesticks',
+            subheading: 'The Harbinger of Doom',
+            description: 'For nearly twenty years, Fiddlesticks has stood alone in the easternmost summoning chamber of the Institute of War. Only the burning emerald light of his unearthly gaze pierces the musty darkness of his dust-covered home. It is here that the Harbinger of Doom keeps a silent vigil. His is a cautionary tale of power run amok, taught to all summoners within the League.',
             image: 'img/fiddleSquare.png'
         };
 
         $scope.secondFeature = {
-            heading: 'Otro evento',
-            subheading: 'Quien ganara?',
-            description: '5v5 summoners rift.',
+            heading: 'Ziggs',
+            subheading: 'The Hexplosives Expert',
+            description: 'Ziggs was born with a talent for tinkering, but his chaotic, hyperactive nature was unusual among yordle scientists. Aspiring to be a revered inventor like  Heimerdinger, he rattled through ambitious projects with manic zeal, emboldened by both his explosive failures and his unprecedented discoveries. Word of Ziggs volatile experimentation reached the famed Yordle Academy in Piltover and its esteemed professors invited him to demonstrate his craft.',
             image: 'img/ziggsSquare.png'
         };
 
         $scope.thirdFeature = {
-            heading: 'Hello World Event',
-            subheading: 'Llama a tus amigos',
-            description: 'Full ARAM.',
+            heading: 'Brand',
+            subheading: 'The Burning Vengeance',
+            description: 'In a faraway place known as Lokfar there was a seafaring marauder called Kegan Rodhe. As was his people’s way, Kegan sailed far and wide with his fellows, stealing treasures from those unlucky enough to catch their attention. To some, he was a monster; to others, just a man. One night, as they sailed through the arctic waters, strange lights danced over the frozen wastes.',
             image: 'img/brandSquare.png'
         };
 
