@@ -67,6 +67,11 @@
     height: 100%;
 }
 
+.event-icon-a {
+    background-color: rgba(40, 187, 20, 1);
+    border-radius: 25px;
+}
+
 .general-background {
     position: absolute;
     top: 0;
@@ -100,11 +105,12 @@
 }
 
 .home-background {
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .event-list {
     width: 80%;
+    max-width: 800px;
 }
 
 .signin-field {
