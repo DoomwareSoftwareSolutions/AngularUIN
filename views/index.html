@@ -1,0 +1,48 @@
+<html ng-app="myApp">
+  <head>
+    <meta charset='utf8'>
+    <base href='/'>
+    <title>Angular Express Bootstrap Seed App</title>
+    <link rel='stylesheet' href='/bootstrap/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/css/app.css' />
+  <body>
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse"></button>
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>    
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="view1">View1</a>
+        </li>
+        <li>  
+          <a href="view2">View2</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div ng-controller='AppCtrl'>
+      <div class="jumbotron">
+        <h1>Hello {{name}}</h1>
+      <div ng-view></div>
+    </div>
+  </div>
+  
+  <div include-page></div>
+
+  <script src='js/lib/angular/angular.js'></script>
+  <script src='js/services.js'></script>
+  <script src='js/controllers.js'></script>
+  <script src='js/filters.js'></script>
+  <script src='js/directives.js'></script>
+  <script src='js/app.js'></script>
+  <script src='js/lib/jquery/jquery-2.0.3.min.js'></script>
+  <script src='bootstrap/js/bootstrap.min.js'></script>
+  </body>
+</html>
