@@ -6,28 +6,31 @@ var depList = [
     'myApp.filters',
     'myApp.services',
     'myApp.directives',
+    'BackgroundCtrl',
+    'SignInCtrl',
     'HomeCtrl',
     'EventsCtrl',
     'NavCtrl'
 ]
 
 angular.module('myApp', depList).
-config(function ($routeProvider, $locationProvider) {
-  $routeProvider.
-    when('/home', {
-      templateUrl: 'partials/HomeView',
-      controller: 'HomeCtrl'
-    }).
-    when('/events', {
-      templateUrl: 'partials/EventsView',
-      controller: 'EventsCtrl'
-    }).
-    when('/signin', {
-      templateUrl: 'partials/SignInView'
-    }).
-    otherwise({
-      redirectTo: '/home'
-    });
+    config(function ($routeProvider, $locationProvider) {
+        $routeProvider.
+            when('/home', {
+                templateUrl: 'partials/HomeView',
+                controller: 'HomeCtrl'
+            }).
+            when('/events', {
+                templateUrl: 'partials/EventsView',
+                controller: 'EventsCtrl'
+            }).
+            when('/signin', {
+                templateUrl: 'partials/SignInView',
+                controller: 'SignInCtrl'
+            }).
+            otherwise({
+                redirectTo: '/home'
+            });
 
-  $locationProvider.html5Mode(true);
-});
+        $locationProvider.html5Mode(true);
+    });

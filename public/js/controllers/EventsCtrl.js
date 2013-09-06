@@ -7,6 +7,8 @@ var controllerName = 'EventsCtrl';
 angular.module(controllerName, []).
     controller(controllerName, function ($scope, $http) {
 
+        $scope.$emit("BackgroundChange", "events-background");
+
         var eventOne = {
             heading: 'Best Lee Sin',
             body: '1v1 top. Lee Sin Only',

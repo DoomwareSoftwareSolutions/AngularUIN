@@ -15,7 +15,7 @@ angular.module(controllerName, []).
 
         $scope.clickLink = function (linkName) {
             $scope.activeLink = linkName;
-            $location.path(linkName);
+            return linkName;
         }
 
     });

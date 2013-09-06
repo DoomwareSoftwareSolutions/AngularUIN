@@ -8,44 +8,54 @@
     <link rel="stylesheet" href="/css/app.css"/>
 </head>
 <body style>
-<div class="navbar-wrapper">
-    <div class="container">
+<div class="fullscreen" ng-controller="BackgroundCtrl">
 
-        <div class="navbar navbar-inverse navbar-static-top" ng-controller="NavCtrl">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">UIN Gaming</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li ng-class="{'active': activeClass('/signin')}">
-                            <a ng-click="clickLink('/signin')">Sign In</a>
-                        </li>
-                        <li ng-class="{'active': activeClass('/home')}">
-                            <a ng-click="clickLink('/home')">Home</a>
-                        </li>
-                        <li ng-class="{'active': activeClass('/events')}">
-                            <a ng-click="clickLink('/events')">Events</a>
-                        </li>
-                    </ul>
+    <div class="navbar-wrapper">
+        <div class="container">
+
+            <div class="navbar navbar-inverse navbar-static-top" ng-controller="NavCtrl">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">UIN Gaming</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="/signin">Sign In</a>
+                            </li>
+                            <li>
+                                <a href="/home">Home</a>
+                            </li>
+                            <li>
+                                <a href="/events">Events</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
+
+    <div class="ng-view fullscreen"></div>
+
+    <div class="general-background" ng-class="bgClass"></div>
+
 </div>
 
-<div class="ng-view" style="width: 100%; height: 100%;"></div>
 
 <script src="js/lib/angular/angular.min.js"></script>
 <script src="js/lib/jquery.min.js"></script>
 <script src="js/lib/bootstrap.js"></script>
 <script src="js/lib/holder.js"></script>
+<script src="js/controllers/BackgroundCtrl.js"></script>
+<script src="js/controllers/SignInCtrl.js"></script>
 <script src="js/controllers/HomeCtrl.js"></script>
 <script src="js/controllers/EventsCtrl.js"></script>
 <script src="js/controllers/NavCtrl.js"></script>
