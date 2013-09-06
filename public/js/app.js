@@ -8,8 +8,9 @@ angular.module('myApp', depList).
 	  
     $routeProvider.when('/view1', {templateUrl: 'partial/1', controller: 'OneCtrl'});
     $routeProvider.when('/view2', {templateUrl: 'partial/2', controller: 'TwoCtrl'});
+    $routeProvider.when('/login', {templateUrl: 'partial/login'});
     
-    $routeProvider.otherwise({redirectTo: '/view1'});
+    $routeProvider.otherwise({redirectTo: '/login'});
     
     $locationProvider.html5Mode(true);
     
