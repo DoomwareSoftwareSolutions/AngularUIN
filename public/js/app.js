@@ -1,17 +1,26 @@
 'use strict';
 
-var depList = ['myApp.filters', 'myApp.services', 'myApp.directives', 'AppCtrl', 'OneCtrl', 'TwoCtrl'];
-
 // Declare app level module which depends on filters, and services
-angular.module('myApp', depList).
-  config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-	  
-    $routeProvider.when('/view1', {templateUrl: 'partial/1', controller: 'OneCtrl'});
-    $routeProvider.when('/view2', {templateUrl: 'partial/2', controller: 'TwoCtrl'});
-    $routeProvider.when('/login', {templateUrl: 'partial/login'});
-    
-    $routeProvider.otherwise({redirectTo: '/login'});
-    
-    $locationProvider.html5Mode(true);
-    
-  }]);
+
+angular.module('myApp', [
+  'myApp.controllers',
+  'myApp.filters',
+  'myApp.services',
+  'myApp.directives'
+]).
+config(function ($routeProvider, $locationProvider) {
+  $routeProvider.
+    when('/view1', {
+      templateUrl: 'partials/partial1',
+      controller: 'HomeCtrl'
+    }).
+    when('/view2', {
+      templateUrl: 'partials/partial2',
+      controller: 'MyCtrl2'
+    }).
+    otherwise({
+      redirectTo: '/view1'
+    });
+
+  $locationProvider.html5Mode(true);
+});

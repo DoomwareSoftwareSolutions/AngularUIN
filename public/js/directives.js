@@ -3,6 +3,8 @@
 /* Directives */
 
 angular.module('myApp.directives', []).
-  directive('includePage', [function() {
-    return {templateUrl: 'partial/directive'};
-  }]);
+  directive('appVersion', function (version) {
+    return function(scope, elm, attrs) {
+      elm.text(version);
+    };
+  });
