@@ -22,9 +22,8 @@ config(function ($routeProvider, $locationProvider) {
       templateUrl: 'partials/EventsView',
       controller: 'EventsCtrl'
     }).
-    when('/view2', {
-      templateUrl: 'partials/partial2',
-      controller: 'MyCtrl2'
+    when('/signin', {
+      templateUrl: 'partials/SignInView'
     }).
     otherwise({
       redirectTo: '/home'
