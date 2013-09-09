@@ -21,6 +21,10 @@ angular.module(controllerName, []).
             setCarouselDimensions();
         });
 
+        if (window.location.href.search('#homeSlider') < 0) {
+            window.location.href = window.location.href + '#homeSlider'
+        }
+
         $scope.arrowLink = 'home#homeSlider';
 
         $scope.slides = HomeService.getSlides($q);
