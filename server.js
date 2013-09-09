@@ -43,6 +43,8 @@ app.get('/api/name', api.name);
 
 app.get('/api/events', api.events);
 
+app.get('/api/slides', api.slides);
+
 app.get('*', routes.index);
 
 app.listen(app.get('port'), function() {

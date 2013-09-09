@@ -7,6 +7,7 @@ var depList = [
     'myApp.services',
     'myApp.directives',
     'EventService',
+    'HomeService',
     'BackgroundCtrl',
     'SignInCtrl',
     'HomeCtrl',
@@ -35,3 +36,8 @@ angular.module('myApp', depList).
 
         $locationProvider.html5Mode(true);
     });
+
+var errorOnREST = function (error) {
+    alert(error.config.method + ': ' + error.config.url + ' [status: ' + error.status + ']');
+    return false;
+}
