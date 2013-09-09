@@ -27,6 +27,5 @@ app.get '/api/slides', api.slides
 app.get '/api/features', api.features
 app.get '*', routes.index
 
-
 app.listen app.get('port'), () ->
   console.log 'Express server listening on port ' + app.get('port')
