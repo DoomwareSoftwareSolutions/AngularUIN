@@ -8,6 +8,7 @@ var depList = [
     'myApp.directives',
     'EventService',
     'HomeService',
+    'EventRegisterCtrl',
     'BackgroundCtrl',
     'SignInCtrl',
     'HomeCtrl',
@@ -29,6 +30,10 @@ angular.module('myApp', depList).
             when('/signin', {
                 templateUrl: 'partials/SignInView',
                 controller: 'SignInCtrl'
+            }).
+            when('/eventregister', {
+                templateUrl: 'partials/EventRegisterView',
+                controller: 'EventRegisterCtrl'
             }).
             otherwise({
                 redirectTo: '/home'

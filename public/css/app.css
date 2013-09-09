@@ -67,7 +67,7 @@
     height: 100%;
 }
 
-.form-signin {
+.form-padding {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 30px;
     padding-top: 10px;
@@ -103,6 +103,15 @@
 
 .signin-background {
     background-image: url("../img/katafest.jpg");
+    filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+.event-register-background {
+    background-image: url("../img/zac.jpg");
     filter: blur(2px);
     -o-filter: blur(2px);
     -ms-filter: blur(2px);
