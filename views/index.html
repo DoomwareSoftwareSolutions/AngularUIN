@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="/css/carrousel.css"/>
     <link rel="stylesheet" href="/css/app.css"/>
 </head>
-<body class="fullscreen">
+<body id="body" class="fullscreen">
 <div class="fullscreen" ng-controller="BackgroundCtrl">
 
     <div class="navbar-container" nav-bar></div>
 
-    <div class="ng-view fullscreen"></div>
+    <div class="ng-view fullscreen" ng-show="!activeSpinner"></div>
 
     <div class="general-background" ng-class="bgClass"></div>
+    <div class="spinner" ng-show="activeSpinner"></div>
 
 </div>
 

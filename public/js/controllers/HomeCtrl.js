@@ -8,6 +8,7 @@ angular.module(controllerName, []).
     controller(controllerName, ['$scope', '$http', '$q', 'HomeService', function ($scope, $http, $q, HomeService) {
 
         $scope.$emit("BackgroundChange", "home-background");
+        $scope.$emit("ShowSpinner");
 
         var setCarouselDimensions = function () {
             $('#homeSlider').height(window.innerHeight);

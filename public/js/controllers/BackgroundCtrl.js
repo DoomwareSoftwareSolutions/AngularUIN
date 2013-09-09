@@ -14,6 +14,16 @@ angular.module(controllerName, []).
             triggerDigest();
         });
 
+        $scope.$on("ShowSpinner", function () {
+            $scope.activeSpinner = true;
+            triggerDigest();
+        });
+
+        $scope.$on("HideSpinner", function () {
+            $scope.activeSpinner = false;
+            triggerDigest();
+        });
+
         var triggerDigest = function () {
             if (!$scope.$$phase) {
                 $scope.$digest();

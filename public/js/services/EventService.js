@@ -9,11 +9,12 @@ angular.module(name, []).factory(name, ['$http', function ($http) {
 
     var eventList = [];
 
-    EventService.getEvents = function ($q) {
+    EventService.getEvents = function ($q, $scope) {
         // Promise: http://docs.angularjs.org/api/ng.$q
         return $q.all([$http.get('http://localhost:3000/api/events')])
             .then(function (results) {
                 eventList = results[0].data;
+                $scope.$emit("HideSpinner");
                 return eventList;
             }, errorOnREST);
     }

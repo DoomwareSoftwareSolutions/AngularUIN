@@ -12,7 +12,8 @@ angular.module(controllerName, []).
     controller(controllerName, ['$scope', '$location', '$http', '$q', 'EventService', function ($scope, $location, $http, $q, EventService) {
 
         $scope.$emit("BackgroundChange", "events-background");
+        $scope.$emit("ShowSpinner");
 
-        $scope.events = EventService.getEvents($q);
+        $scope.events = EventService.getEvents($q, $scope);
 
     }]);

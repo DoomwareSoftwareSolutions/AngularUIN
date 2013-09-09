@@ -12,6 +12,7 @@ angular.module(name, []).factory(name, ['$http', function ($http) {
         return $q.all([$http.get('http://localhost:3000/api/slides')])
             .then(function (results) {
                 var slideList = results[0].data;
+                $scope.$emit("HideSpinner");
                 return slideList;
             }, errorOnREST);
     }
@@ -21,6 +22,7 @@ angular.module(name, []).factory(name, ['$http', function ($http) {
         return $q.all([$http.get('http://localhost:3000/api/features')])
             .then(function (results) {
                 var featureList = results[0].data;
+                $scope.$emit("HideSpinner");
                 return featureList;
             }, errorOnREST);
     }
