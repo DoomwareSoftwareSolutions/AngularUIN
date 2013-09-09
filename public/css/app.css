@@ -152,3 +152,22 @@
 .third-row {
     background-color: rgba(255, 0, 0, 0.5);
 }
+
+.slide-indicator {
+    margin-right: 5px !important;
+}
+
+.carousel .item {
+    transition: .7s ease-in-out opacity;
+    left: 0 !important
+}
+
+.carousel .next.left, .carousel .prev.right {
+    opacity: 1;
+    z-index: 1
+}
+
+.carousel .active.left, .carousel .active.right {
+    opacity: 0;
+    z-index: 2
+}
