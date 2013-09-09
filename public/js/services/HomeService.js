@@ -7,7 +7,7 @@ angular.module(name, []).factory(name, ['$http', function ($http) {
 
     var HomeService = {};
 
-    HomeService.getSlides = function ($q) {
+    HomeService.getSlides = function ($q, $scope) {
         // Promise: http://docs.angularjs.org/api/ng.$q
         return $q.all([$http.get('http://localhost:3000/api/slides')])
             .then(function (results) {
@@ -17,12 +17,11 @@ angular.module(name, []).factory(name, ['$http', function ($http) {
             }, errorOnREST);
     }
 
-    HomeService.getFeatures = function ($q) {
+    HomeService.getFeatures = function ($q, $scope) {
         // Promise: http://docs.angularjs.org/api/ng.$q
         return $q.all([$http.get('http://localhost:3000/api/features')])
             .then(function (results) {
                 var featureList = results[0].data;
-                $scope.$emit("HideSpinner");
                 return featureList;
             }, errorOnREST);
     }
