@@ -121,6 +121,14 @@
     max-width: 100%;
 }
 
+.custom-navbar-wrapper {
+    margin-top: 0;
+}
+
+.navbar-container {
+    padding-top: 20px;
+}
+
 .custom-row {
     padding-left: 5%;
     padding-right: 5%;
