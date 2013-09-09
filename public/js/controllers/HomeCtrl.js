@@ -10,8 +10,7 @@ angular.module(controllerName, []).
         $scope.$emit("BackgroundChange", "home-background");
 
         var setCarouselDimensions = function () {
-            $('#myCarousel').height(window.innerHeight);
-            $('#myCarousel').carousel();
+            $('#homeSlider').height(window.innerHeight);
         }
 
         $(window).resize(function () {
@@ -22,7 +21,7 @@ angular.module(controllerName, []).
             setCarouselDimensions();
         });
 
-        $scope.arrowLink = 'home#myCarousel';
+        $scope.arrowLink = 'home#homeSlider';
 
         $scope.slides = HomeService.getSlides($q);
         $scope.features = HomeService.getFeatures($q);
